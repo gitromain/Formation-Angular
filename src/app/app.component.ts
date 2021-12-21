@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'beer-tp';
+  isAuth = false;
+
+  beerOne = 'Leffe';
+  beerTwo = 'Paix Dieux';
+  beerThree = 'Corbeau';
+
+  constructor() {
+    setTimeout(
+      () => {
+        this.isAuth = true;
+      }, 3000
+    );
+  }
+
+  onAcheter() {
+    console.log('J\'ai acheté toutes les bières');
+  }
 }
