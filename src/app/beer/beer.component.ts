@@ -10,7 +10,8 @@ export class BeerComponent implements OnInit {
   @Input()
   beerName: string;
 
-  beerColor = 'Blonde';
+  @Input()
+  beerColor: string;
 
   constructor() {
   }

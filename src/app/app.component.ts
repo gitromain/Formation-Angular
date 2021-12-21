@@ -8,6 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   isAuth = false;
 
+  beerOne = 'Leffe';
+  beerTwo = 'Paix Dieux';
+  beerThree = 'Corbeau';
+
+  beerColorOne = 'Rouge';
+  beerColorTwo = 'Blonde';
+  beerColorThree = 'Ambrée';
+
   constructor() {
     setTimeout(
       () => {
