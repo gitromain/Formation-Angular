@@ -3,9 +3,7 @@
     <div class="col-xs-12">
       <h2>Mes bières</h2>
       <ul class="list-group">
-        <app-beer [beerName]="beerOne" [beerColor]="beerColorOne" [isAvailable]="false"></app-beer>
-        <app-beer [beerName]="beerTwo" [beerColor]="beerColorTwo" [isAvailable]="true"></app-beer>
-        <app-beer [beerName]="beerThree" [beerColor]="beerColorThree" [isAvailable]="true"></app-beer>
+        <!-- ngFor here ! -->
       </ul>
       <button class="btn btn-success"
               (click)="onAcheter()"
