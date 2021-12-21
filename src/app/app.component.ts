@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,23 @@ import { Component } from '@angular/core';
 export class AppComponent {
   isAuth = false;
 
-  beers = [];
+  beers = [
+    {
+      name: 'Leffe',
+      color: 'blonde',
+      isAvailable: true
+    },
+    {
+      name: 'Paix Dieux',
+      color: 'rouge',
+      isAvailable: true
+    },
+    {
+      name: 'Cuvée des trolls',
+      color: 'ambrée',
+      isAvailable: false
+    }
+  ];
 
   constructor() {
     setTimeout(

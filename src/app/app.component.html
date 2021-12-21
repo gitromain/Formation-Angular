@@ -3,11 +3,16 @@
     <div class="col-xs-12">
       <h2>Mes bières</h2>
       <ul class="list-group">
-        <!-- ngFor here ! -->
+        <app-beer *ngFor="let beer of beers"
+                  [beerName]="beer.name"
+                  [beerColor]="beer.color"
+                  [isAvailable]="beer.isAvailable"
+        ></app-beer>
       </ul>
       <button class="btn btn-success"
               (click)="onAcheter()"
-              [disabled]="!isAuth">Acheter</button>
+              [disabled]="!isAuth">Acheter
+      </button>
     </div>
   </div>
 </div>
