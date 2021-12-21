@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {BeerColorEnum} from './shared/beer-color-enum.enum';
 
 @Component({
   selector: 'app-root',
@@ -11,17 +12,17 @@ export class AppComponent {
   beers = [
     {
       name: 'Leffe',
-      color: 'blonde',
+      color: BeerColorEnum.BLOND,
       isAvailable: true
     },
     {
       name: 'Paix Dieux',
-      color: 'rouge',
+      color: BeerColorEnum.RED,
       isAvailable: true
     },
     {
       name: 'Cuvée des trolls',
-      color: 'ambrée',
+      color: BeerColorEnum.AMBER,
       isAvailable: false
     }
   ];

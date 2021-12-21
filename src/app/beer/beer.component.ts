@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {BeerColorEnum} from '../shared/beer-color-enum.enum';
 
 @Component({
   selector: 'app-beer',
@@ -11,7 +12,7 @@ export class BeerComponent implements OnInit {
   beerName: string;
 
   @Input()
-  beerColor: string;
+  beerColor: BeerColorEnum;
 
   @Input()
   isAvailable: boolean;
@@ -26,4 +27,16 @@ export class BeerComponent implements OnInit {
     return this.beerColor;
   }
 
+  getBeerColorStyle() {
+    switch (this.beerColor){
+      case BeerColorEnum.AMBER:
+        return 'brown';
+      case BeerColorEnum.WHITE:
+        return 'white';
+      case BeerColorEnum.BLOND:
+          return 'yellow';
+      case BeerColorEnum.RED:
+        return 'red';
+    }
+  }
 }
