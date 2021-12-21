@@ -13,6 +13,7 @@ export class BeerComponent implements OnInit {
   @Input()
   beerColor: string;
 
+  @Input()
   isAvailable: boolean;
 
   constructor() {
