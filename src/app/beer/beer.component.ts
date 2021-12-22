@@ -17,6 +17,9 @@ export class BeerComponent implements OnInit {
   @Input()
   isAvailable: boolean;
 
+  @Input()
+  price: number;
+
   constructor() {
   }
 

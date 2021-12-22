@@ -9,21 +9,26 @@ import {BeerColorEnum} from './shared/beer-color-enum.enum';
 export class AppComponent {
   isAuth = false;
 
+  actualDate = new Date();
+
   beers = [
     {
       name: 'Leffe',
       color: BeerColorEnum.BLOND,
-      isAvailable: true
+      isAvailable: true,
+      price: 3.5
     },
     {
       name: 'Paix Dieux',
       color: BeerColorEnum.RED,
-      isAvailable: true
+      isAvailable: true,
+      price: 5
     },
     {
       name: 'Cuvée des trolls',
       color: BeerColorEnum.AMBER,
-      isAvailable: false
+      isAvailable: false,
+      price: 8
     }
   ];
 
