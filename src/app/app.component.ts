@@ -1,44 +1,30 @@
-import {Component} from '@angular/core';
-import {BeerColorEnum} from './shared/beer-color-enum.enum';
+import {Component, OnInit} from '@angular/core';
+import {BeerService} from './services/beer.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   isAuth = false;
 
   actualDate = new Date();
 
-  beers = [
-    {
-      name: 'Leffe',
-      color: BeerColorEnum.BLOND,
-      isAvailable: true,
-      price: 3.5
-    },
-    {
-      name: 'Paix Dieux',
-      color: BeerColorEnum.RED,
-      isAvailable: true,
-      price: 5
-    },
-    {
-      name: 'Cuvée des trolls',
-      color: BeerColorEnum.AMBER,
-      isAvailable: false,
-      price: 8
-    }
-  ];
+  beers: any[];
 
-  constructor() {
+  constructor(private beerService: BeerService) {
     setTimeout(
       () => {
         this.isAuth = true;
       }, 3000
     );
   }
+
+  ngOnInit(): void {
+        this.beers = this.beerService.beers;
+  }
+
 
   onAcheter() {
     console.log('J\'ai acheté toutes les bières');
