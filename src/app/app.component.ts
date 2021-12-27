@@ -30,7 +30,7 @@ export class AppComponent implements OnInit{
     console.log('J\'ai acheté toutes les bières');
   }
 
-  onRemplirFut(){
-    this.beerService.remplirFut();
+  onRemplirTousLesFut(){
+    this.beerService.remplirTousLesFut();
   }
 }

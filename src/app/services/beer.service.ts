@@ -27,10 +27,14 @@ export class BeerService {
     }
   ];
 
-  public remplirFut(){
+  remplirTousLesFut(){
     for (const beer of this.beers) {
       beer.isAvailable = true;
     }
+  }
+
+  remplirFut(index: number){
+    this.beers[index].isAvailable = true;
   }
 
   constructor() { }

@@ -4,7 +4,8 @@
       <h2>Mes bières</h2>
       <p>Nous sommes le : {{ actualDate | date:'EEEE, d,MMMM, y' | uppercase }}</p>
       <ul class="list-group">
-        <app-beer *ngFor="let beer of beers"
+        <app-beer *ngFor="let beer of beers; let i = index"
+                  [index]="i"
                   [beerName]="beer.name"
                   [beerColor]="beer.color"
                   [isAvailable]="beer.isAvailable"
@@ -16,7 +17,7 @@
               [disabled]="!isAuth">Acheter
       </button>
       <button class="btn btn-success"
-              (click)="onRemplirFut()">Remplir Fut
+              (click)="onRemplirTousLesFut()">Remplir tous les Fûts
       </button>
     </div>
   </div>

@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {BeerColorEnum} from '../shared/beer-color-enum.enum';
+import {BeerService} from '../services/beer.service';
 
 @Component({
   selector: 'app-beer',
@@ -20,7 +21,10 @@ export class BeerComponent implements OnInit {
   @Input()
   price: number;
 
-  constructor() {
+  @Input()
+  index: number;
+
+  constructor(private beerService: BeerService) {
   }
 
   ngOnInit(): void {
@@ -41,5 +45,9 @@ export class BeerComponent implements OnInit {
       case BeerColorEnum.RED:
         return 'red';
     }
+  }
+
+  onRemplirFut(){
+    this.beerService.remplirFut(this.index);
   }
 }
