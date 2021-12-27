@@ -27,5 +27,11 @@ export class BeerService {
     }
   ];
 
+  public remplirFut(){
+    for (const beer of this.beers) {
+      beer.isAvailable = true;
+    }
+  }
+
   constructor() { }
 }

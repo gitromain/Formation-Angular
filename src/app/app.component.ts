@@ -29,4 +29,8 @@ export class AppComponent implements OnInit{
   onAcheter() {
     console.log('J\'ai acheté toutes les bières');
   }
+
+  onRemplirFut(){
+    this.beerService.remplirFut();
+  }
 }
