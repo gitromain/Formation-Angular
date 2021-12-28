@@ -8,6 +8,7 @@ import {BeerService} from './services/beer.service';
 import { AuthComponent } from './auth/auth.component';
 import { BeerViewComponent } from './beer-view/beer-view.component';
 import {AppRoutingModule} from './app-routing.module';
+import {AuthService} from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import {AppRoutingModule} from './app-routing.module';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [BeerService],
+  providers: [BeerService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
