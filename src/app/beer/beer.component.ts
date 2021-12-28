@@ -24,6 +24,9 @@ export class BeerComponent implements OnInit {
   @Input()
   index: number;
 
+  @Input()
+  id: number;
+
   constructor(private beerService: BeerService) {
   }
 

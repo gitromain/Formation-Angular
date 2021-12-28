@@ -1,6 +1,7 @@
 <li class="list-group-item">
   <div style="width:20px;height:20px;background-color: red" *ngIf="!isAvailable"></div>
   <h4 [ngStyle]="{color: getBeerColorStyle()}">Nom de la bière : {{ beerName }} -- {{ getBeerColor() }} -- {{ price | currency }}</h4>
+  <a [routerLink]="[id]">Détail</a>
   <input [ngClass]="{'ma-class':true}" type="text" class="form-control" [(ngModel)]="beerName">
   <button class="btn btn-success"
           (click)="onRemplirFut()" [disabled]="isAvailable">Remplir Fut

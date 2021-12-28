@@ -9,6 +9,7 @@ import { AuthComponent } from './auth/auth.component';
 import { BeerViewComponent } from './beer-view/beer-view.component';
 import {AppRoutingModule} from './app-routing.module';
 import {AuthService} from './services/auth.service';
+import { BeerDetailComponent } from './beer-detail/beer-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {AuthService} from './services/auth.service';
     BeerComponent,
     AuthComponent,
     BeerViewComponent,
+    BeerDetailComponent,
   ],
   imports: [
     BrowserModule,

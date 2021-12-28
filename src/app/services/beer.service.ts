@@ -8,24 +8,33 @@ export class BeerService {
 
   beers = [
     {
+      id: 1,
       name: 'Leffe',
       color: BeerColorEnum.BLOND,
       isAvailable: true,
       price: 3.5
     },
     {
+      id: 2,
       name: 'Paix Dieux',
       color: BeerColorEnum.RED,
       isAvailable: true,
       price: 5
     },
     {
+      id: 3,
       name: 'Cuvée des trolls',
       color: BeerColorEnum.AMBER,
       isAvailable: false,
       price: 8
     }
   ];
+
+  getBeerById(id: number){
+    return this.beers.find((beer) => {
+      return beer.id === id;
+    });
+  }
 
   remplirTousLesFut(){
     for (const beer of this.beers) {
