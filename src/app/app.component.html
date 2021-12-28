@@ -1,11 +1,12 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <ul class="nav navbar-nav">
-      <li routerLinkActive="active"><a routerLink="auth">Authentification</a></li>
-      <li routerLinkActive="active"><a routerLink="beers">Bières</a></li>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="auth">Authentification</a></li>
+      <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="beers">Bières</a></li>
     </ul>
   </div>
 </nav>
+<br/>
 <div class="container">
   <div class="row">
     <router-outlet></router-outlet>
