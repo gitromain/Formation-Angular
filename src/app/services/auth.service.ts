@@ -8,7 +8,7 @@ export class AuthService {
   isAuth = false;
 
   signIn() {
-    this.isAuth = false;
+    this.isAuth = true;
   }
 
   signOut(){
