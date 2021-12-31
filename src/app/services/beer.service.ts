@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import {BeerColorEnum} from '../shared/beer-color-enum.enum';
+import {Subject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BeerService {
 
-  beers = [
+  beerSubject = new Subject<any[]>();
+
+  private beers = [
     {
       id: 1,
       name: 'Leffe',
@@ -30,6 +33,10 @@ export class BeerService {
     }
   ];
 
+  emitBeerSubject(){
+    this.beerSubject.next(this.beers.slice());
+  }
+
   getBeerById(id: number){
     return this.beers.find((beer) => {
       return beer.id === id;
@@ -40,10 +47,12 @@ export class BeerService {
     for (const beer of this.beers) {
       beer.isAvailable = true;
     }
+    this.emitBeerSubject();
   }
 
   remplirFut(index: number){
     this.beers[index].isAvailable = true;
+    this.emitBeerSubject();
   }
 
   constructor() { }

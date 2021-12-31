@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {BeerService} from '../services/beer.service';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-beer-view',
@@ -13,6 +14,7 @@ export class BeerViewComponent implements OnInit {
   actualDate = new Date();
 
   beers: any[];
+  beerSubscription: Subscription;
 
   constructor(private beerService: BeerService) {
     setTimeout(
@@ -23,7 +25,12 @@ export class BeerViewComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.beers = this.beerService.beers;
+    this.beerSubscription = this.beerService.beerSubject.subscribe(
+      (beers: any[]) => {
+        this.beers = beers;
+      }
+    );
+    this.beerService.emitBeerSubject();
   }
 
 
