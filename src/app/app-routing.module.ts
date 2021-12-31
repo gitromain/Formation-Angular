@@ -5,6 +5,7 @@ import {AuthComponent} from './auth/auth.component';
 import {BeerDetailComponent} from './beer-detail/beer-detail.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {AuthGuard} from './guard/auth.guard';
+import {EditBeerComponent} from './edit-beer/edit-beer.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,11 @@ const routes: Routes = [
   {
     path: 'beers/:id',
     component: BeerDetailComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'edit',
+    component: EditBeerComponent,
     canActivate: [AuthGuard]
   },
   {

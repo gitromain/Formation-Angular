@@ -12,6 +12,7 @@ import {AuthService} from './services/auth.service';
 import { BeerDetailComponent } from './beer-detail/beer-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {AuthGuard} from './guard/auth.guard';
+import { EditBeerComponent } from './edit-beer/edit-beer.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {AuthGuard} from './guard/auth.guard';
     BeerViewComponent,
     BeerDetailComponent,
     PageNotFoundComponent,
+    EditBeerComponent,
   ],
   imports: [
     BrowserModule,
