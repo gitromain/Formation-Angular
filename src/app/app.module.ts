@@ -13,6 +13,8 @@ import { BeerDetailComponent } from './beer-detail/beer-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {AuthGuard} from './guard/auth.guard';
 import { EditBeerComponent } from './edit-beer/edit-beer.component';
+import { UserListComponent } from './user-list/user-list.component';
+import {UserService} from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -23,13 +25,14 @@ import { EditBeerComponent } from './edit-beer/edit-beer.component';
     BeerDetailComponent,
     PageNotFoundComponent,
     EditBeerComponent,
+    UserListComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule
   ],
-  providers: [BeerService, AuthService, AuthGuard],
+  providers: [BeerService, AuthService, UserService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {
