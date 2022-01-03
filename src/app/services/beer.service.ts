@@ -55,5 +55,19 @@ export class BeerService {
     this.emitBeerSubject();
   }
 
+  addBeer(beerName: string, beerPrice: number, beerColor: BeerColorEnum){
+    const beerObject = {
+      id: this.beers[(this.beers.length - 1)].id + 1,
+      name: beerName,
+      color: beerColor,
+      isAvailable: true,
+      price: beerPrice,
+    };
+
+    this.beers.push(beerObject);
+    this.emitBeerSubject();
+
+  }
+
   constructor() { }
 }
