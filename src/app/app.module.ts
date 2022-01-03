@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {BeerComponent} from './beer/beer.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BeerService} from './services/beer.service';
 import { AuthComponent } from './auth/auth.component';
 import { BeerViewComponent } from './beer-view/beer-view.component';
@@ -30,7 +30,8 @@ import {UserService} from './services/user.service';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [BeerService, AuthService, UserService, AuthGuard],
   bootstrap: [AppComponent]
