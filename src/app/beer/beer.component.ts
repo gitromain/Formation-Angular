@@ -8,16 +8,11 @@ import {Component, OnInit} from '@angular/core';
 export class BeerComponent implements OnInit {
 
   beerName = 'Paix dieux';
-  beerColor = 'Blonde';
 
   constructor() {
   }
 
   ngOnInit(): void {
-  }
-
-  getBeerColor(){
-    return this.beerColor;
   }
 
 }
